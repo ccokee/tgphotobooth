@@ -1,0 +1,13 @@
+[Unit]
+Description=Telegram PhotoBooth Bot
+After=network.target
+
+[Service]
+ExecStart=/home/dietpi/tgphotobooth/venv/bin/python /home/dietpi/tgphotobooth/tgphotobooth.py
+WorkingDirectory=/home/dietpi/tgphotobooth/
+Restart=always
+User=dietpi
+Group=dietpi
+
+[Install]
+WantedBy=multi-user.target
